@@ -1,0 +1,39 @@
+#连接前端
+server:
+  port: 7777
+
+#连接数据库
+spring:
+  datasource:
+    #type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myblog?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: huangziqi1999530
+
+  #文件上传
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 5MB
+
+  #配置Redis
+  redis:
+    host: 192.168.241.132
+    port: 6379
+    password: huang@zi@qi@1999530
+
+
+#mybatis-plus配置
+mybatis-plus:
+  configuration:
+    #日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+
+oss:
+  accessKey: O1iidg4m2f0KYsx32hA5hcI8U2XSu9lcD3ri_BEd
+  secretKey: asa_XVJGfeIlGKWkitGez3oVBbgLR9pDF_OH2jcQ
+  bucket: njupt-blog
